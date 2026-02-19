@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rescue Driver - Official Website</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: #020617;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.container {
+    padding: 30px; /* FIXED from 00px */
+    max-width: 1100px; /* slightly wider for better text space */
+    margin: auto;
+}
+
+/* SIDE BY SIDE SECTION (for About + Developer) */
+.side-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* mobile responsive */
+}
+
+/* TEXT AREA (wider + cleaner) */
+.text-box {
+    flex: 1;
+    max-width: 850px; /* increased width */
+    text-align: left;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.game-img {
+    max-width: 140px;
+    border-radius: 20px;
+}
+
+.dev-img {
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.features {
+    text-align: left;
+    margin-top: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features ul {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+footer {
+    background: #020617;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+a {
+    color: #38bdf8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Rescue Driver</h1>
+    <p>Official Website by HiPlay Studios</p>
+</header>
+
+<div class="container">
+
+    <!-- ABOUT GAME (IMAGE LEFT + TEXT RIGHT) -->
+    <div class="side-section">
+        <img src="game-img.png" class="game-img" alt="Rescue Driver Gameplay">
+
+        <div class="text-box">
+            <h2>About the Game</h2>
+            <p>
+            Rescue Driver is a scenic driving game where skill, focus, and calm decision-making matter.
+            A group of people is trapped on a mountain top due to heavy snowfall and vehicle breakdown.
+            You play as a driver on a rescue journey through difficult terrain to reach them and bring them safely home.
+            </p>
+
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.Harish.rescuedriver" target="_blank">
+                Download on Google Play
+            </a>
+        </div>
+    </div>
+
+    <!-- GAMEPLAY FEATURES -->
+    <div class="features">
+        <h2>Gameplay Features</h2>
+        <ul>
+            <li>Drive through roads, slopes, mountains, and tunnels</li>
+            <li>Peaceful scenic environments</li>
+            <li>Avoid collisions with trucks, cars, and tractors</li>
+            <li>Smooth and simple controls</li>
+            <li>Family-friendly, non-violent gameplay</li>
+            <li>Offline playable</li>
+        </ul>
+    </div>
+
+    <!-- DEVELOPER (SAME LAYOUT AS TOP - PERFECT MATCH) -->
+    <div class="side-section">
+        <img src="dev-img.jpg" class="dev-img" alt="HiPlay Studios">
+
+        <div class="text-box">
+            <h2>Developer - HiPlay Studios</h2>
+            <p>
+            HiPlay Studios develops family-friendly, peaceful and non-violent games focused on calm gameplay,
+            simple controls, and enjoyable experiences for all age groups.
+            </p>
+        </div>
+    </div>
+
+    <!-- PRIVACY POLICY -->
+    <h2 style="margin-top:50px;">Privacy Policy</h2>
+   <p>
+    <a href="https://gamedevlopment25.github.io/privacy-policy.html" target="_blank">
+        View Privacy Policy
+    </a>
+    </p>
+    <!-- CONTACT -->
+    <h2>Contact</h2>
+    <p>Email: gamedevlopment25@gmail.com</p>
+
+</div>
+
+<footer>
+    <p>© 2026 HiPlay Studios | Rescue Driver</p>
+</footer>
+
+</body>
+</html>
