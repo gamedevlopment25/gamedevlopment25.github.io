@@ -20,7 +20,7 @@
 body{
     background:#f5f5f5;
     color:#222;
-    line-height:1.5;
+    line-height:1.4;
 }
 
 /* HEADER */
@@ -29,31 +29,31 @@ header{
     background:#0c7c3d;
     color:white;
     text-align:center;
-    padding:20px 15px;
+    padding:15px 10px;
 }
 
 header h1{
-    font-size:32px;
+    font-size:28px;
     margin-bottom:5px;
 }
 
 header p{
-    font-size:16px;
+    font-size:15px;
 }
 
 /* NAVIGATION */
 
 nav{
     background:#111;
-    padding:10px;
+    padding:8px;
     text-align:center;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 12px;
-    font-size:16px;
+    margin:0 10px;
+    font-size:15px;
 }
 
 nav a:hover{
@@ -63,37 +63,37 @@ nav a:hover{
 /* HERO SECTION */
 
 .hero{
-    padding:35px 15px;
+    padding:25px 10px;
     text-align:center;
     background:white;
 }
 
 .hero h2{
-    font-size:30px;
-    margin-bottom:15px;
+    font-size:26px;
+    margin-bottom:10px;
     color:#0c7c3d;
 }
 
 .hero p{
-    font-size:18px;
-    max-width:800px;
+    font-size:16px;
+    max-width:700px;
     margin:auto;
 }
 
 /* GENERAL SECTION */
 
 .section{
-    padding:30px 5%;
+    padding:20px 4%;
 }
 
 .section h2{
-    margin-bottom:15px;
+    margin-bottom:10px;
     color:#0c7c3d;
-    font-size:28px;
+    font-size:24px;
 }
 
 .section p{
-    font-size:17px;
+    font-size:15px;
 }
 
 /* BUSINESS BOX */
@@ -101,12 +101,13 @@ nav a:hover{
 .business-box{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:15px;
     background:white;
-    margin-bottom:25px;
+    margin-bottom:20px;
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    padding:15px;
 }
 
 .reverse{
@@ -116,14 +117,17 @@ nav a:hover{
 /* IMAGE */
 
 .image-box{
-    flex:1;
-    min-height:220px;
+    flex:0.5;
+    max-width:300px;
+    min-height:160px;
+    margin:auto;
 }
 
 .image-box img{
     width:100%;
-    height:100%;
+    height:160px;
     object-fit:cover;
+    border-radius:8px;
     display:block;
 }
 
@@ -131,7 +135,16 @@ nav a:hover{
 
 .content-box{
     flex:1;
-    padding:20px;
+    padding:10px;
+}
+
+.content-box h2{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.content-box p{
+    font-size:15px;
 }
 
 /* CONTACT */
@@ -140,7 +153,7 @@ nav a:hover{
     text-align:center;
     background:white;
     border-radius:10px;
-    padding:25px;
+    padding:20px;
 }
 
 /* FOOTER */
@@ -149,8 +162,9 @@ footer{
     background:#111;
     color:white;
     text-align:center;
-    padding:15px;
-    margin-top:20px;
+    padding:12px;
+    margin-top:15px;
+    font-size:14px;
 }
 
 /* MOBILE */
@@ -166,28 +180,33 @@ footer{
     }
 
     header h1{
-        font-size:26px;
+        font-size:24px;
     }
 
     .hero h2{
-        font-size:24px;
+        font-size:22px;
     }
 
     .hero p{
-        font-size:16px;
+        font-size:15px;
     }
 
     .section h2{
-        font-size:24px;
+        font-size:22px;
     }
 
     nav a{
         display:inline-block;
-        margin:5px 8px;
+        margin:5px 6px;
     }
 
     .image-box{
-        min-height:180px;
+        max-width:100%;
+        min-height:140px;
+    }
+
+    .image-box img{
+        height:140px;
     }
 }
 
@@ -264,7 +283,7 @@ footer{
 
     <h2>Contact Us</h2>
 
-    <p>Email:skgoyal@gmail.com</p>
+    <p>Email: skgoyal@gmail.com</p>
     <p>Phone: +91 9368852395</p>
 
 </section>
