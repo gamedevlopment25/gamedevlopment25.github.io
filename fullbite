@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Bite</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    color:#222;
+}
+
+header{
+    background:#2e7d32;
+    color:white;
+    padding:50px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:55px;
+    margin:0;
+}
+
+header p{
+    font-size:20px;
+}
+
+section{
+    padding:40px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#2e7d32;
+}
+
+ul{
+    line-height:2;
+}
+
+.hero-image{
+    width:100%;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+footer{
+    background:#1b1b1b;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#2e7d32;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>FULL BITE</h1>
+    <p>Fresh • Hygienic • Sufficient Food</p>
+</header>
+
+<section>
+
+<div class="card">
+<h2>About Us</h2>
+
+<p>
+Full Bite aims to provide hygienic, fresh, and sufficient meals
+focused on nutrition and health standards rather than expensive taste.
+Our goal is to serve complete meals at affordable prices.
+</p>
+
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop"
+class="hero-image">
+</div>
+
+<div class="card">
+<h2>Services</h2>
+
+<ul>
+<li>Online Food Delivery</li>
+<li>Fresh Daily Cooking</li>
+<li>Seasonal Healthy Meals</li>
+<li>Eco-Friendly Packaging</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Meal Timing</h2>
+
+<ul>
+<li><b>Morning Meal:</b> 7 AM – 9 AM</li>
+<li><b>Dinner:</b> 5 PM – 7 PM</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Menu</h2>
+
+<ul>
+<li>Seasonal Vegetables</li>
+<li>Bread / Roti</li>
+<li>Fresh Salad</li>
+<li>Sweet Dish</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Special Features</h2>
+
+<ul>
+<li>Cost: ₹50 – ₹100</li>
+<li>Quantity equal to a full meal</li>
+<li>Nutrient-based health standards</li>
+<li>Complete recyclable packaging material</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Contact</h2>
+
+<p>Email: gamedevlopment25@gmail.com</p>
+
+<a class="btn" href="mailto:gamedevlopment25@gmail.com">
+Contact Us
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Full Bite. All Rights Reserved.
+</footer>
+
+</body>
+</html>
