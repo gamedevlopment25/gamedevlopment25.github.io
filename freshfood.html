@@ -1,11 +1,13 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FreshFood - Healthy Food Processing</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -17,6 +19,8 @@ body{
     background:#f4fff4;
     color:#222;
 }
+
+/* HEADER */
 
 header{
     background:linear-gradient(135deg,#0b7d2b,#2dbd59);
@@ -38,21 +42,24 @@ header{
 }
 
 .logo img{
-    width:80px;
-    height:80px;
+    width:90px;
+    height:90px;
     border-radius:50%;
     background:white;
     padding:5px;
+    object-fit:cover;
 }
 
 .logo h1{
-    font-size:38px;
+    font-size:40px;
 }
 
 .logo span{
-    color:#dfffdc;
-    font-size:16px;
+    font-size:18px;
+    color:#e8ffe7;
 }
+
+/* HERO SECTION */
 
 .hero{
     margin-top:40px;
@@ -60,7 +67,7 @@ header{
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
-    gap:30px;
+    gap:40px;
 }
 
 .hero-text{
@@ -69,29 +76,32 @@ header{
 }
 
 .hero-text h2{
-    font-size:50px;
+    font-size:58px;
+    line-height:1.2;
     margin-bottom:20px;
 }
 
 .hero-text p{
-    font-size:18px;
-    line-height:1.7;
-    margin-bottom:25px;
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:30px;
 }
 
 .btn{
     display:inline-block;
-    padding:14px 30px;
+    padding:16px 34px;
     background:white;
     color:#0b7d2b;
-    text-decoration:none;
     border-radius:40px;
+    text-decoration:none;
+    font-size:20px;
     font-weight:bold;
     transition:0.3s;
 }
 
 .btn:hover{
     background:#dfffdc;
+    transform:scale(1.05);
 }
 
 .hero-image{
@@ -102,8 +112,14 @@ header{
 
 .hero-image img{
     width:100%;
-    max-width:450px;
+    max-width:420px;
+    border-radius:20px;
+    background:white;
+    padding:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
+
+/* SECTION */
 
 section{
     padding:70px 8%;
@@ -111,7 +127,7 @@ section{
 
 .section-title{
     text-align:center;
-    font-size:40px;
+    font-size:48px;
     color:#0b7d2b;
     margin-bottom:50px;
 }
@@ -124,38 +140,43 @@ section{
 
 .card{
     background:white;
-    border-radius:18px;
     padding:30px;
+    border-radius:20px;
     text-align:center;
     box-shadow:0 8px 20px rgba(0,0,0,0.08);
     transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
 .card h3{
     color:#0b7d2b;
+    font-size:30px;
     margin-bottom:15px;
-    font-size:28px;
 }
 
 .card p{
-    line-height:1.6;
+    line-height:1.7;
+    font-size:17px;
 }
+
+/* ABOUT */
 
 .about{
     background:#e9ffe9;
-    border-radius:20px;
     padding:40px;
+    border-radius:20px;
     text-align:center;
 }
 
 .about p{
-    font-size:20px;
+    font-size:22px;
     line-height:1.8;
 }
+
+/* CONTACT */
 
 .contact-box{
     display:grid;
@@ -165,36 +186,54 @@ section{
 
 .contact-card{
     background:white;
-    padding:25px;
-    border-radius:18px;
+    padding:30px;
+    border-radius:20px;
     text-align:center;
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
 .contact-card h3{
     color:#0b7d2b;
+    font-size:28px;
     margin-bottom:10px;
 }
+
+.contact-card p{
+    font-size:18px;
+}
+
+/* FOOTER */
 
 footer{
     background:#0b7d2b;
     color:white;
     text-align:center;
     padding:25px;
-    margin-top:40px;
+    font-size:18px;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
 .hero-text h2{
-    font-size:38px;
+    font-size:40px;
 }
 
 .logo h1{
     font-size:30px;
 }
 
+.section-title{
+    font-size:36px;
 }
+
+.hero-text p{
+    font-size:18px;
+}
+
+}
+
 </style>
 </head>
 
@@ -205,12 +244,14 @@ footer{
 <div class="navbar">
 
 <div class="logo">
+
 <img src="soya.png" alt="FreshFood Logo">
 
 <div>
 <h1>FreshFood</h1>
 <span>Healthy Food Processing</span>
 </div>
+
 </div>
 
 </div>
@@ -218,6 +259,7 @@ footer{
 <div class="hero">
 
 <div class="hero-text">
+
 <h2>Pure & Healthy Food Products</h2>
 
 <p>
@@ -227,10 +269,13 @@ with premium quality and freshness.
 </p>
 
 <a href="#" class="btn">For Online Delivery Click Here</a>
+
 </div>
 
 <div class="hero-image">
+
 <img src="soya.png" alt="Soya Product">
+
 </div>
 
 </div>
@@ -297,11 +342,13 @@ Healthy dried tomato products rich in taste and nutrition.
 <h2 class="section-title">About Us</h2>
 
 <div class="about">
+
 <p>
 FreshFood is dedicated to processing healthy food products while
 maintaining their natural nutrition and quality. We focus on purity,
 freshness, and customer satisfaction.
 </p>
+
 </div>
 
 </section>
@@ -337,3 +384,4 @@ freshness, and customer satisfaction.
 
 </body>
 </html>
+```
