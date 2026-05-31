@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homeopathic Doctor | Agra</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4fff7;
+color:#333;
+line-height:1.7;
+}
+
+/* Header */
+
+.hero{
+background:linear-gradient(135deg,#0b7d45,#4cc97e);
+color:white;
+padding:70px 20px;
+}
+
+.hero-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+animation:fadeInLeft 1s ease;
+}
+
+.hero-text h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero-text p{
+font-size:20px;
+}
+
+.hero img{
+width:280px;
+border-radius:20px;
+border:6px solid white;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+animation:fadeInRight 1s ease;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:white;
+color:#0b7d45;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+}
+
+.section{
+max-width:1200px;
+margin:auto;
+padding:70px 20px;
+}
+
+.section-title{
+text-align:center;
+color:#0b7d45;
+font-size:36px;
+margin-bottom:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+margin-bottom:25px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.treatment{
+background:white;
+padding:25px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+font-weight:600;
+transition:.3s;
+}
+
+.treatment:hover{
+background:#0b7d45;
+color:white;
+}
+
+.qualifications{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.qual-box{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.testimonial{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.testimonial h4{
+color:#0b7d45;
+margin-top:10px;
+}
+
+.form-box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+max-width:700px;
+margin:auto;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+background:#0b7d45;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+
+.map{
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.contact{
+background:#0b7d45;
+color:white;
+text-align:center;
+padding:50px 20px;
+}
+
+footer{
+background:#085d33;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* Floating Buttons */
+
+.whatsapp{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+z-index:999;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.call{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#0b7d45;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+z-index:999;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+@keyframes fadeInLeft{
+from{
+opacity:0;
+transform:translateX(-50px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+@keyframes fadeInRight{
+from{
+opacity:0;
+transform:translateX(50px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+@media(max-width:768px){
+
+.hero-container{
+flex-direction:column;
+text-align:center;
+}
+
+.hero img{
+width:220px;
+}
+
+.hero-text h1{
+font-size:36px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div class="hero-text">
+
+<h1>Homeopathic Doctor</h1>
+
+<p>
+Natural Healing • Better Health • Lasting Relief
+</p>
+
+<p>
+Providing effective homeopathic treatment by addressing the root cause of disease and promoting long-term wellness.
+</p>
+
+<a href="#appointment" class="btn">Book Appointment</a>
+
+</div>
+
+<img src="dr1.png" alt="Doctor">
+
+</div>
+
+</section>
+
+<!-- Vision -->
+
+<section class="section">
+
+<h2 class="section-title">Our Vision</h2>
+
+<div class="card">
+
+To restore health naturally and provide long-lasting relief through homeopathic treatment. We are committed to helping patients recover from chronic and difficult diseases such as cancer, diabetes, arthritis, skin disorders, asthma, sinusitis, and hair fall by treating the root cause and improving overall well-being.
+
+</div>
+
+</section>
+
+<!-- Mission -->
+
+<section class="section">
+
+<h2 class="section-title">Our Mission</h2>
+
+<div class="card">
+
+To cure people with smile and help them lead healthier and happier lives through compassionate homeopathic care.
+
+</div>
+
+</section>
+
+<!-- Qualifications -->
+
+<section class="section">
+
+<h2 class="section-title">Doctor Qualifications</h2>
+
+<div class="qualifications">
+
+<div class="qual-box">
+<h3>BHMS</h3>
+<p>Bachelor of Homeopathic Medicine & Surgery</p>
+</div>
+
+<div class="qual-box">
+<h3>Experience</h3>
+<p>Serving patients with dedication and care.</p>
+</div>
+
+<div class="qual-box">
+<h3>Specialization</h3>
+<p>Chronic & Lifestyle Diseases</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Treatments -->
+
+<section class="section">
+
+<h2 class="section-title">Conditions We Treat</h2>
+
+<div class="grid">
+
+<div class="treatment">Cancer Support</div>
+<div class="treatment">Diabetes</div>
+<div class="treatment">Arthritis</div>
+<div class="treatment">Skin Disorders</div>
+<div class="treatment">Asthma</div>
+<div class="treatment">Sinusitis</div>
+<div class="treatment">Hair Fall</div>
+<div class="treatment">Chronic Diseases</div>
+
+</div>
+
+</section>
+
+<!-- Testimonials -->
+
+<section class="section">
+
+<h2 class="section-title">Patient Testimonials</h2>
+
+<div class="grid">
+
+<div class="testimonial">
+<p>
+Excellent treatment and caring approach. Highly satisfied.
+</p>
+<h4>★★★★★ Patient</h4>
+</div>
+
+<div class="testimonial">
+<p>
+Natural treatment helped improve my long-term health issues.
+</p>
+<h4>★★★★★ Patient</h4>
+</div>
+
+<div class="testimonial">
+<p>
+Professional consultation and genuine care.
+</p>
+<h4>★★★★★ Patient</h4>
+</div>
+
+</div>
+
+</section>
+
+<!-- Appointment Form -->
+
+<section class="section" id="appointment">
+
+<h2 class="section-title">Book Appointment</h2>
+
+<div class="form-box">
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="tel" placeholder="Mobile Number" required>
+
+<input type="date" required>
+
+<textarea rows="5" placeholder="Describe Your Problem"></textarea>
+
+<button type="submit">Submit Appointment Request</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- Google Map -->
+
+<section class="section">
+
+<h2 class="section-title">Clinic Location</h2>
+
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=Dayalbagh%20Agra&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="400"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section class="contact">
+
+<h2>Visit Our Clinic</h2>
+
+<p>Neelkamal Apartment, Dayalbagh, Agra</p>
+
+<p>Natural Homeopathic Care For All Ages</p>
+
+</section>
+
+<footer>
+
+© 2026 Homeopathic Clinic | Agra
+
+</footer>
+
+<!-- Floating WhatsApp -->
+
+<a
+class="whatsapp"
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank">
+💬
+</a>
+
+<!-- Floating Call -->
+
+<a
+class="call"
+href="tel:+91XXXXXXXXXX">
+📞
+</a>
+
+</body>
+</html>
