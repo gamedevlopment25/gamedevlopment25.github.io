@@ -1,94 +1,132 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rescue Driver - Official Website</title>
+<title>HiPlay Studios - Games & 3D Animation</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
-    text-align: center;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    text-align:center;
 }
 
-header {
-    background: #020617;
-    padding: 30px;
+header{
+    background:#020617;
+    padding:30px;
 }
 
-h1 {
-    font-size: 42px;
-    margin: 10px 0;
+h1{
+    font-size:42px;
+    margin:10px 0;
 }
 
-.container {
-    padding: 30px;
-    max-width: 1100px;
-    margin: auto;
+.container{
+    padding:30px;
+    max-width:1100px;
+    margin:auto;
 }
 
-.side-section {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+.side-section{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    gap:50px;
+    margin-top:40px;
+    flex-wrap:wrap;
 }
 
-.text-box {
-    flex: 1;
-    max-width: 850px;
-    text-align: left;
-    line-height: 1.6;
-    font-size: 18px;
+.text-box{
+    flex:1;
+    max-width:850px;
+    text-align:left;
+    line-height:1.6;
+    font-size:18px;
 }
 
-.game-img {
-    max-width: 220px;
-    border-radius: 20px;
+.game-img,
+.dev-img{
+    max-width:220px;
+    border-radius:20px;
 }
 
-.dev-img {
-    max-width: 220px;
-    border-radius: 20px;
+.btn{
+    display:inline-block;
+    padding:15px 25px;
+    background:#22c55e;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    border-radius:10px;
+    margin-top:20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 25px;
-    background: #22c55e;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 10px;
-    margin-top: 20px;
+.features{
+    text-align:left;
+    margin-top:50px;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.features {
-    text-align: left;
-    margin-top: 50px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+.features ul{
+    font-size:18px;
+    line-height:1.8;
 }
 
-.features ul {
-    font-size: 18px;
-    line-height: 1.8;
+.animation-box{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    margin-top:50px;
+    text-align:left;
 }
 
-footer {
-    background: #020617;
-    padding: 20px;
-    margin-top: 50px;
+.video-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    margin-top:20px;
 }
 
-a {
-    color: #38bdf8;
+.video-container iframe{
+    width:350px;
+    height:200px;
+    max-width:100%;
+    border:none;
+    border-radius:10px;
+}
+
+footer{
+    background:#020617;
+    padding:20px;
+    margin-top:50px;
+}
+
+a{
+    color:#38bdf8;
+}
+
+@media (max-width:768px){
+
+    h1{
+        font-size:32px;
+    }
+
+    .video-container iframe{
+        width:100%;
+        height:220px;
+    }
+
+    .game-img,
+    .dev-img{
+        max-width:180px;
+    }
 }
 </style>
 </head>
@@ -97,43 +135,88 @@ a {
 
 <header>
     <h1>HiPlay Studios</h1>
-    <p>Official Website </p>
+    <p>Game Development & 3D Animation Services</p>
 </header>
 
 <div class="container">
 
-    <!-- DEVELOPER SECTION AT TOP -->
+    <!-- DEVELOPER SECTION -->
+
     <div class="side-section">
+
         <img src="dev-img.jpg" class="dev-img" alt="HiPlay Studios">
 
         <div class="text-box">
+
             <h2>Developer - HiPlay Studios</h2>
 
             <p>
-            HiPlay Studios develops family-friendly, peaceful and non-violent games focused on calm gameplay,
-            simple controls, and enjoyable experiences for all age groups.
+                HiPlay Studios develops family-friendly, peaceful and
+                non-violent games focused on calm gameplay, simple controls,
+                and enjoyable experiences for all age groups.
             </p>
+
+            <p>
+                We also provide professional 3D animation services using
+                Blender, including educational animations, industrial
+                demonstrations, product visualizations and promotional videos.
+            </p>
+
         </div>
+
     </div>
 
-    <!-- GAMEPLAY FEATURES -->
-    <div class="features">
-        <h2>Gameplay Features</h2>
+    <!-- ANIMATION SECTION -->
 
-        
+    <div class="animation-box">
+
+        <h2>3D Animation Services</h2>
+
+        <p>
+            Below are some animation samples created using Blender.
+        </p>
+
+        <div class="video-container">
+
+            <iframe
+                src="https://www.youtube.com/embed/VHI0z7Qhg6E"
+                title="Animation Sample 1"
+                allowfullscreen>
+            </iframe>
+
+            <iframe
+                src="https://www.youtube.com/embed/wgagzCH1lTg"
+                title="Animation Sample 2"
+                allowfullscreen>
+            </iframe>
+
+            <iframe
+                src="https://www.youtube.com/embed/jdVWwHbGYqs"
+                title="Animation Sample 3"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
     </div>
 
-    <!-- ABOUT GAME AT BOTTOM -->
+    <!-- GAME 1 -->
+
     <div class="side-section">
+
         <img src="game-img.png" class="game-img" alt="Rescue Driver Gameplay">
 
         <div class="text-box">
+
             <h2>Rescue Driver</h2>
 
             <p>
-            Rescue Driver is a scenic driving game where skill, focus, and calm decision-making matter.
-            A group of people is trapped on a mountain top due to heavy snowfall,jungle mwarZone etc and vehicle breakdown.
-            You play as a driver on a rescue journey through difficult terrain to reach them and bring them safely home.
+                Rescue Driver is a scenic driving game where skill,
+                focus and calm decision-making matter.
+                A group of people is trapped on a mountain top due to
+                heavy snowfall, jungle environments and vehicle breakdown.
+                You play as a driver on a rescue journey through difficult
+                terrain to reach them and bring them safely home.
             </p>
 
             <a class="btn"
@@ -141,64 +224,88 @@ a {
                target="_blank">
                Download on Google Play
             </a>
+
         </div>
+
     </div>
-        <!-- SECOND GAME SECTION -->
+
+    <!-- GAME 2 -->
+
     <div class="side-section">
-       <img src="buffalo-game.png.png" class="game-img" alt="Feed the Buffalo">
+
+        <img src="buffalo-game.png" class="game-img" alt="Feed the Buffalo">
 
         <div class="text-box">
+
             <h2>Feed the Buffalo</h2>
 
             <p>
-            Feed the Buffalo is a calm puzzle-based game where players place different stones
-            into the correct slots to solve challenges. The game focuses on simple thinking,
-            peaceful gameplay, and enjoyable puzzle-solving for all age groups.
+                Feed the Buffalo is a calm puzzle-based game where players
+                place different stones into the correct slots to solve
+                challenges. The game focuses on simple thinking,
+                peaceful gameplay and enjoyable puzzle-solving for
+                all age groups.
             </p>
 
             <a class="btn"
-               href="YOUR_GOOGLE_PLAY_LINK_HERE"
+               href="#"
                target="_blank">
-               Download on Google Play
+               Coming Soon
             </a>
+
         </div>
+
     </div>
- <!-- Third GAME SECTION -->
+
+    <!-- GAME 3 -->
+
     <div class="side-section">
-      <img src="rocket mission.png" class="game-img" alt="Rocket Mission">
+
+        <img src="rocket mission.png" class="game-img" alt="Rocket Mission">
 
         <div class="text-box">
-            <h2>Rocket mission</h2>
+
+            <h2>Rocket Mission</h2>
 
             <p>
-            Rocket mission is to reach different destination by using rocket .
+                Rocket Mission is a space adventure game where players
+                travel to different destinations using rockets and
+                complete exciting missions.
             </p>
 
             <a class="btn"
-               href="YOUR_GOOGLE_PLAY_LINK_HERE"
+               href="#"
                target="_blank">
-               Download on Google Play
+               Coming Soon
             </a>
+
         </div>
+
     </div>
+
     <!-- PRIVACY POLICY -->
+
     <h2 style="margin-top:50px;">Privacy Policy</h2>
 
     <p>
-        <a href="https://gamedevlopment25.github.io/privacy-policy.html" target="_blank">
-            View Privacy Policy
+        <a href="https://gamedevlopment25.github.io/privacy-policy.html"
+           target="_blank">
+           View Privacy Policy
         </a>
     </p>
 
     <!-- CONTACT -->
+
     <h2>Contact</h2>
+
     <p>Email: gamedevlopment25@gmail.com</p>
 
 </div>
 
 <footer>
-    <p>© 2026 HiPlay Studios | Rescue Driver</p>
+    <p>© 2026 HiPlay Studios | Games & 3D Animation Services</p>
 </footer>
 
 </body>
 </html>
+```
