@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HiPlay Studios - Games & 3D Animation</title>
+
+<title>HiPlay Studios - Games, 3D Animation & Web Development</title>
 
 <style>
+
 body{
     margin:0;
     font-family:Arial, sans-serif;
@@ -22,6 +24,10 @@ header{
 h1{
     font-size:42px;
     margin:10px 0;
+}
+
+h2{
+    color:#ffffff;
 }
 
 .container{
@@ -64,9 +70,13 @@ h1{
     margin-top:20px;
 }
 
+.btn:hover{
+    background:#16a34a;
+}
+
 .features{
     text-align:left;
-    margin-top:50px;
+    margin-top:30px;
     max-width:900px;
     margin-left:auto;
     margin-right:auto;
@@ -101,6 +111,36 @@ h1{
     border-radius:10px;
 }
 
+.service-box{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    margin-top:50px;
+    text-align:left;
+}
+
+.service-box h2{
+    text-align:center;
+}
+
+.service-box p{
+    font-size:18px;
+    line-height:1.7;
+}
+
+.service-list{
+    font-size:18px;
+    line-height:1.9;
+}
+
+.contact-box{
+    margin-top:50px;
+}
+
+.contact-box a{
+    color:#38bdf8;
+}
+
 footer{
     background:#020617;
     padding:20px;
@@ -126,24 +166,43 @@ a{
     .dev-img{
         max-width:180px;
     }
+
+    .text-box{
+        font-size:16px;
+    }
+
+    .service-box{
+        padding:20px;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
     <h1>HiPlay Studios</h1>
-    <p>Game Development & 3D Animation Services</p>
+
+    <p>
+        Game Development, 3D Animation & Web Development Services
+    </p>
+
 </header>
 
+
 <div class="container">
+
 
     <!-- DEVELOPER SECTION -->
 
     <div class="side-section">
 
-        <img src="dev-img.jpg" class="dev-img" alt="HiPlay Studios">
+        <img src="dev-img.jpg"
+             class="dev-img"
+             alt="HiPlay Studios">
 
         <div class="text-box">
 
@@ -161,11 +220,18 @@ a{
                 demonstrations, product visualizations and promotional videos.
             </p>
 
+            <p>
+                In addition, we provide web development services for
+                businesses, organizations, games, applications and
+                personal portfolios.
+            </p>
+
         </div>
 
     </div>
 
-    <!-- ANIMATION SECTION -->
+
+    <!-- 3D ANIMATION SECTION -->
 
     <div class="animation-box">
 
@@ -179,19 +245,19 @@ a{
 
             <iframe
                 src="https://www.youtube.com/embed/VHI0z7Qhg6E"
-                title="Animation Sample 1"
+                title="3D Animation Sample 1"
                 allowfullscreen>
             </iframe>
 
             <iframe
                 src="https://www.youtube.com/embed/wgagzCH1lTg"
-                title="Animation Sample 2"
+                title="3D Animation Sample 2"
                 allowfullscreen>
             </iframe>
 
             <iframe
                 src="https://www.youtube.com/embed/jdVWwHbGYqs"
-                title="Animation Sample 3"
+                title="3D Animation Sample 3"
                 allowfullscreen>
             </iframe>
 
@@ -199,197 +265,329 @@ a{
 
     </div>
 
-    <!-- GAME 1 -->
+
+    <!-- WEB DEVELOPMENT SECTION -->
+
+    <div class="service-box">
+
+        <h2>Web Development Services</h2>
+
+        <p>
+            HiPlay Studios provides modern, responsive and user-friendly
+            website development services for businesses, organizations,
+            individuals and digital projects.
+        </p>
+
+        <p>
+            We create websites that work smoothly on desktop computers,
+            tablets and mobile devices, with clean design and easy
+            navigation.
+        </p>
+
+        <div class="features">
+
+            <ul class="service-list">
+
+                <li>Business & Company Websites</li>
+
+                <li>Portfolio & Personal Websites</li>
+
+                <li>Game & App Websites</li>
+
+                <li>Responsive Mobile-Friendly Websites</li>
+
+                <li>Landing Pages</li>
+
+                <li>Educational & Informational Websites</li>
+
+                <li>Product & Service Websites</li>
+
+                <li>Website Maintenance & Updates</li>
+
+            </ul>
+
+        </div>
+
+        <p>
+            Websites can be developed using HTML, CSS, JavaScript and
+            other modern web technologies according to project
+            requirements.
+        </p>
+
+        <div style="text-align:center;">
+
+            <a class="btn"
+               href="mailto:gamedevlopment25@gmail.com">
+
+               Contact for Web Development
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- GAME DEVELOPMENT SECTION -->
+
     <div class="animation-box">
 
         <h2>Game Development Services</h2>
 
         <p>
-            Below are some Games  created using Unity.
+            Below are some games created using Unity.
         </p>
 
-    <div class="side-section">
 
-        <img src="rescuedriver1.png" class="game-img" alt="Rescue Driver Gameplay">
+        <!-- GAME 1 -->
 
-        <div class="text-box">
+        <div class="side-section">
 
-            <h2>Rescue Driver</h2>
+            <img src="rescuedriver1.png"
+                 class="game-img"
+                 alt="Rescue Driver Gameplay">
 
-            <p>
-                Rescue Driver is a scenic driving game where skill,
-                focus and calm decision-making matter.
-                A group of people is trapped on a mountain top due to
-                heavy snowfall, jungle environments and vehicle breakdown.
-                You play as a driver on a rescue journey through difficult
-                terrain to reach them and bring them safely home.
-            </p>
+            <div class="text-box">
 
-            <a class="btn"
-               href="https://play.google.com/store/apps/details?id=com.Harish.rescuedriver"
-               target="_blank">
-               Download on Google Play
-            </a>
+                <h2>Rescue Driver</h2>
 
-        </div>
+                <p>
+                    Rescue Driver is a scenic driving game where skill,
+                    focus and calm decision-making matter.
+                    A group of people is trapped on a mountain top due to
+                    heavy snowfall, jungle environments and vehicle breakdown.
+                    You play as a driver on a rescue journey through difficult
+                    terrain to reach them and bring them safely home.
+                </p>
 
-    </div>
+                <a class="btn"
+                   href="https://play.google.com/store/apps/details?id=com.Harish.rescuedriver"
+                   target="_blank">
 
-    <!-- GAME 2 -->
+                   Download on Google Play
 
-    <div class="side-section">
+                </a>
 
-        <img src="buffalo-game.png.png" class="game-img" alt="Feed the Buffalo">
-
-        <div class="text-box">
-
-            <h2>Feed the Buffalo</h2>
-
-            <p>
-                Feed the Buffalo is a calm puzzle-based game where players
-                place different stones into the correct slots to solve
-                challenges. The game focuses on simple thinking,
-                peaceful gameplay and enjoyable puzzle-solving for
-                all age groups.
-            </p>
-
-           <a class="btn"
-            href="https://play.google.com/store/apps/details?id=com.feedthebuffalo&hl=en_IN"
-            target="_blank">
-             Download on Google Play
-            </a>
+            </div>
 
         </div>
 
-    </div>
 
-    <!-- GAME 3 -->
+        <!-- GAME 2 -->
 
-    <div class="side-section">
+        <div class="side-section">
 
-        <img src="marsh mission.png" class="game-img" alt="Rocket Mission">
+            <img src="buffalo-game.png.png"
+                 class="game-img"
+                 alt="Feed the Buffalo">
 
-        <div class="text-box">
+            <div class="text-box">
 
-            <h2>Mars Mission</h2>
+                <h2>Feed the Buffalo</h2>
 
-            <p>
-                Mars Mission is a space adventure game where players
-                travel to different destinations using rockets and
-                complete exciting missions.
-            </p>
+                <p>
+                    Feed the Buffalo is a calm puzzle-based game where players
+                    place different stones into the correct slots to solve
+                    challenges. The game focuses on simple thinking,
+                    peaceful gameplay and enjoyable puzzle-solving for
+                    all age groups.
+                </p>
 
-            <a class="btn"
-               href="#"
-               target="_blank">
-               Coming Soon
-            </a>
+                <a class="btn"
+                   href="https://play.google.com/store/apps/details?id=com.feedthebuffalo&hl=en_IN"
+                   target="_blank">
+
+                   Download on Google Play
+
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
+
+        <!-- GAME 3 -->
+
+        <div class="side-section">
+
+            <img src="marsh mission.png"
+                 class="game-img"
+                 alt="Mars Mission">
+
+            <div class="text-box">
+
+                <h2>Mars Mission</h2>
+
+                <p>
+                    Mars Mission is a space adventure game where players
+                    travel to different destinations using rockets and
+                    complete exciting missions.
+                </p>
+
+                <a class="btn"
+                   href="#"
+                   target="_blank">
+
+                   Coming Soon
+
+                </a>
+
+            </div>
+
+        </div>
+
+
         <!-- GAME 4 -->
 
-<div class="side-section">
+        <div class="side-section">
 
-    <img src="home repair master.png" class="game-img" alt="Home Repair Master">
+            <img src="home repair master.png"
+                 class="game-img"
+                 alt="Home Repair Master">
 
-    <div class="text-box">
+            <div class="text-box">
 
-        <h2>Home Repair Master</h2>
+                <h2>Home Repair Master</h2>
 
-        <p>
-            Home Repair Master is an educational simulation game that
-            teaches practical household repair and maintenance skills.
-            Learn fan repair, electrical wiring, tube light installation,
-            plumbing, wall painting, house cleaning, sewer maintenance,
-            and many more real-life home improvement techniques through
-            fun and interactive gameplay.
-        </p>
+                <p>
+                    Home Repair Master is an educational simulation game that
+                    teaches practical household repair and maintenance skills.
+                    Learn fan repair, electrical wiring, tube light installation,
+                    plumbing, wall painting, house cleaning, sewer maintenance,
+                    and many more real-life home improvement techniques through
+                    fun and interactive gameplay.
+                </p>
 
-        <a class="btn"
-           href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
-           target="_blank">
-           Coming Soon on Google Play
-        </a>
+                <a class="btn"
+                   href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
+                   target="_blank">
+
+                   Coming Soon on Google Play
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- GAME 5 -->
+
+        <div class="side-section">
+
+            <img src="ramayan1.png"
+                 class="game-img"
+                 alt="RamKatha">
+
+            <div class="text-box">
+
+                <h2>RamKatha</h2>
+
+                <p>
+                    RamKatha is an adventure game inspired by the epic Ramayana.
+                    Explore memorable events, solve engaging puzzles, and
+                    experience the timeless values of courage, devotion,
+                    and righteousness through immersive gameplay.
+                </p>
+
+                <a class="btn"
+                   href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
+                   target="_blank">
+
+                   Coming Soon on Google Play
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- GAME 6 -->
+
+        <div class="side-section">
+
+            <img src="recycle.png"
+                 class="game-img"
+                 alt="City Clean-Up Heroes">
+
+            <div class="text-box">
+
+                <h2>City Clean-Up Heroes</h2>
+
+                <p>
+                    City Clean-Up Heroes is a fun and educational game where
+                    players collect litter, sort waste into the correct
+                    dustbins, and recycle it to keep the city clean.
+                    Learn the importance of cleanliness and environmental
+                    responsibility while enjoying exciting gameplay.
+                </p>
+
+                <a class="btn"
+                   href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
+                   target="_blank">
+
+                   Coming Soon on Google Play
+
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
-</div>
-         <!-- GAME 5 -->
-
-<div class="side-section">
-
-    <img src="ramayan1.png" class="game-img" alt="Home Repair Master">
-
-    <div class="text-box">
-
-        <h2>Ramkatha</h2>
-
-        <p>
-            RamKatha is an adventure game inspired by the epic Ramayana. Explore memorable events, 
-            solve engaging puzzles, and experience the timeless values of courage, devotion, and
-            righteousness through immersive gameplay.
-        </p>
-
-        <a class="btn"
-           href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
-           target="_blank">
-           Coming Soon on Google Play
-        </a>
-
-    </div>
-
-</div>
-         <!-- GAME 6 -->
-
-<div class="side-section">
-
-    <img src="recycle.png" class="game-img" alt="Home Repair Master">
-
-    <div class="text-box">
-
-        <h2>City clean up hero</h2>
-
-        <p>
-           City Clean-Up Heroes is a fun and educational game where players collect litter, sort waste into the correct dustbins,
-            and recycle it to keep the city clean. Learn the importance of cleanliness and environmental responsibility while enjoying
-            exciting gameplay.
-        </p>
-
-        <a class="btn"
-           href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
-           target="_blank">
-           Coming Soon on Google Play
-        </a>
-
-    </div>
-
-</div>
 
     <!-- PRIVACY POLICY -->
 
-    <h2 style="margin-top:50px;">Privacy Policy</h2>
+    <h2 style="margin-top:50px;">
+        Privacy Policy
+    </h2>
 
     <p>
+
         <a href="https://gamedevlopment25.github.io/privacy-policy.html"
            target="_blank">
+
            View Privacy Policy
+
         </a>
+
     </p>
+
 
     <!-- CONTACT -->
 
-    <h2>Contact</h2>
+    <div class="contact-box">
 
-    <p>Email: gamedevlopment25@gmail.com</p>
+        <h2>Contact</h2>
+
+        <p>
+            Email:
+            <a href="mailto:gamedevlopment25@gmail.com">
+                gamedevlopment25@gmail.com
+            </a>
+        </p>
+
+    </div>
+
 
 </div>
 
+
+<!-- FOOTER -->
+
 <footer>
-    <p>© 2026 HiPlay Studios | Games & 3D Animation Services</p>
+
+    <p>
+        © 2026 HiPlay Studios |
+        Game Development |
+        3D Animation |
+        Web Development
+    </p>
+
 </footer>
+
 
 </body>
 </html>
-```
