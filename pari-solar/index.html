@@ -15,13 +15,11 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Two solar images in hero section */
+    /* Hero section: Uploaded solar image */
     .hero-visual {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      display: block;
+      width: 100%;
       height: 390px;
-      align-items: stretch;
       min-width: 0;
     }
 
@@ -29,33 +27,65 @@
       display: block;
       width: 100%;
       height: 100%;
-      min-width: 0;
       object-fit: cover;
       border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    /* About section: Replace generated illustration with solar2.jpg */
+    .about-art {
+      position: relative;
+      width: 100%;
+      min-height: 360px;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .about-photo {
+      display: block;
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 18px;
       box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     }
 
     @media (max-width: 850px) {
       .hero-visual {
         height: 320px;
-        transform: none;
+      }
+
+      .about-photo {
+        height: 320px;
       }
     }
 
     @media (max-width: 680px) {
       .hero-visual {
         height: 260px;
-        gap: 8px;
-        transform: none;
         margin: 15px 0 10px;
+      }
+
+      .about-art {
+        min-height: 280px;
+      }
+
+      .about-photo {
+        height: 280px;
       }
     }
 
     @media (max-width: 390px) {
       .hero-visual {
         height: 220px;
-        margin-left: 0;
-        margin-right: 0;
+      }
+
+      .about-art {
+        min-height: 240px;
+      }
+
+      .about-photo {
+        height: 240px;
       }
     }
   </style>
@@ -144,17 +174,11 @@
 
         </div>
 
-        <!-- Two Solar Panel Images -->
+        <!-- Uploaded Image: solarpanel.jpg -->
         <div class="hero-visual">
-
           <img src="solarpanel.jpg"
-               alt="Solar Panel Installation"
+               alt="PARI Enterprises Solar Panel Installation"
                class="hero-photo">
-
-          <img src="solar2.jpg"
-               alt="Rooftop Solar Panels"
-               class="hero-photo">
-
         </div>
 
       </div>
@@ -201,21 +225,11 @@
 
       <div class="wrap about-grid">
 
+        <!-- Generated Illustration Replaced with solar2.jpg -->
         <div class="about-art">
-
-          <div class="about-circle">
-            <span>☀</span>
-            <b>POWER<br>OF SUN</b>
-          </div>
-
-          <div class="about-panel">
-            <strong>PARI</strong>
-            <span>ENTERPRISES SOLAR</span>
-          </div>
-
-          <div class="leaf leaf-one"></div>
-          <div class="leaf leaf-two"></div>
-
+          <img src="solar2.jpg"
+               alt="Solar Rooftop Installation"
+               class="about-photo">
         </div>
 
         <div class="section-copy">
