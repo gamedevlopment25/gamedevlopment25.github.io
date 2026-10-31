@@ -150,7 +150,7 @@ a {
     linear-gradient(90deg, rgba(4, 28, 53, 0.97) 0%,
     rgba(4, 28, 53, 0.88) 34%,
     rgba(4, 28, 53, 0.12) 75%),
-    url("highcourt1.jpg") center 48% / cover no-repeat;
+    url("highcourt.jpg") center 48% / cover no-repeat;
   display: flex;
   align-items: center;
   color: #fff;
