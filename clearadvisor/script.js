@@ -1,30 +1,31 @@
-
 // Mobile navigation
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", function () {
-    navLinks.classList.toggle("active");
+    const isOpen = navLinks.classList.toggle("active");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
   });
 
-  document.querySelectorAll(".nav-links a").forEach(function (link) {
+  navLinks.querySelectorAll("a").forEach(function (link) {
     link.addEventListener("click", function () {
       navLinks.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
     });
   });
 }
 
 // Current year in footer
 const yearElement = document.getElementById("year");
-
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
-// WhatsApp quote form - no database required
+// WhatsApp quote form
 const quoteForm = document.getElementById("quoteForm");
-
 if (quoteForm) {
   quoteForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -47,9 +48,8 @@ if (quoteForm) {
       "Case Details: " + details;
 
     const whatsappURL =
-      "https://wa.me/918299475998?text=" +
-      encodeURIComponent(message);
+      "https://wa.me/918299475998?text=" + encodeURIComponent(message);
 
-    window.open(whatsappURL, "_blank");
+    window.open(whatsappURL, "_blank", "noopener");
   });
 }
