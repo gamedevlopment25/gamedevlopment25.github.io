@@ -522,10 +522,10 @@ footer {
 
         <nav class="main-nav" aria-label="Main navigation">
             <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#apply-job">Apply for Job</a>
+            <a href="services.html">Services</a>
+            <a href="apply-for-job.html">Apply for Job</a>
             <a href="#contact">Contact</a>
-            <a href="#get-quote" class="nav-quote">Get a Quote</a>
+            <a href="get-a-quote.html" class="nav-quote">Get a Quote</a>
         </nav>
 
     </div>
@@ -752,160 +752,6 @@ footer {
     </p>
 
 
-    <!-- SERVICES -->
-
-    <section class="content-section" id="services">
-
-        <h2>Our Services</h2>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                <h3>Game Development</h3>
-                <p>
-                    2D and 3D game development, gameplay programming,
-                    level design and Unity-based game solutions.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <h3>Web Development</h3>
-                <p>
-                    Responsive business websites, dynamic websites,
-                    website design and web application development.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <h3>Animation Services</h3>
-                <p>
-                    2D animation, 3D animation, character animation
-                    and creative visual content.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- APPLY FOR JOB -->
-
-    <section class="content-section" id="apply-job">
-
-        <h2>Apply for Job</h2>
-
-        <p class="form-note">
-            Interested in working with HiPlay Studios? Share your details
-            and a link to your portfolio or previous work.
-        </p>
-
-        <form class="form-grid" onsubmit="sendJobApplication(event)">
-
-            <div class="form-field">
-                <label for="job-name">Your Name</label>
-                <input id="job-name" name="name" type="text" required>
-            </div>
-
-            <div class="form-field">
-                <label for="job-email">Email Address</label>
-                <input id="job-email" name="email" type="email" required>
-            </div>
-
-            <div class="form-field">
-                <label for="job-role">Applying For</label>
-                <select id="job-role" name="role" required>
-                    <option value="">Select a role</option>
-                    <option>Artist</option>
-                    <option>Musician / Sound Designer</option>
-                    <option>Marketing & Advertising</option>
-                    <option>Game Designer</option>
-                    <option>Animator</option>
-                </select>
-            </div>
-
-            <div class="form-field">
-                <label for="job-portfolio">Portfolio / Work Sample Link</label>
-                <input id="job-portfolio" name="portfolio" type="url"
-                       placeholder="https://">
-            </div>
-
-            <div class="form-field full-width">
-                <label for="job-message">Message</label>
-                <textarea id="job-message" name="message"
-                          placeholder="Tell us about your skills and experience..."></textarea>
-            </div>
-
-            <div class="form-field full-width">
-                <button class="btn form-submit" type="submit">
-                    Submit Application
-                </button>
-                <p class="form-note">
-                    Your default email application will open with your
-                    application details ready to send.
-                </p>
-            </div>
-
-        </form>
-
-    </section>
-
-
-    <!-- GET A QUOTE -->
-
-    <section class="content-section" id="get-quote">
-
-        <h2>Get a Quote</h2>
-
-        <p class="form-note">
-            Tell us about your project and the service you are interested in.
-        </p>
-
-        <form class="form-grid" onsubmit="sendQuoteRequest(event)">
-
-            <div class="form-field">
-                <label for="quote-name">Your Name</label>
-                <input id="quote-name" name="name" type="text" required>
-            </div>
-
-            <div class="form-field">
-                <label for="quote-email">Email Address</label>
-                <input id="quote-email" name="email" type="email" required>
-            </div>
-
-            <div class="form-field full-width">
-                <label for="quote-service">Your Query</label>
-                <select id="quote-service" name="service" required>
-                    <option value="">Select a service</option>
-                    <option>Web Development Service</option>
-                    <option>Animation Service</option>
-                    <option>Game Development Service</option>
-                    <option>Other Enquiry</option>
-                </select>
-            </div>
-
-            <div class="form-field full-width">
-                <label for="quote-details">Project Details</label>
-                <textarea id="quote-details" name="details"
-                          placeholder="Describe your project requirements..."
-                          required></textarea>
-            </div>
-
-            <div class="form-field full-width">
-                <button class="btn form-submit" type="submit">
-                    Send Enquiry
-                </button>
-                <p class="form-note">
-                    Your default email application will open with your
-                    enquiry details ready to send.
-                </p>
-            </div>
-
-        </form>
-
-    </section>
-
-
     <!-- CONTACT -->
 
     <div class="contact-box" id="contact">
@@ -939,9 +785,9 @@ footer {
         <div class="footer-links">
             <h3>Quick Links</h3>
             <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#apply-job">Apply for Job</a>
-            <a href="#get-quote">Get a Quote</a>
+            <a href="services.html">Services</a>
+            <a href="apply-for-job.html">Apply for Job</a>
+            <a href="get-a-quote.html">Get a Quote</a>
             <a href="#contact">Contact</a>
             <a href="https://gamedevlopment25.github.io/privacy-policy.html"
                target="_blank" rel="noopener noreferrer">Privacy Policy</a>
@@ -962,47 +808,7 @@ footer {
 
 </footer>
 
-<script>
-function openEmail(subject, body) {
-    const email = "gamedevlopment25@gmail.com";
-    const mailto = "mailto:" + email
-        + "?subject=" + encodeURIComponent(subject)
-        + "&body=" + encodeURIComponent(body);
 
-    window.location.href = mailto;
-}
-
-function sendJobApplication(event) {
-    event.preventDefault();
-
-    const form = event.target;
-    const data = new FormData(form);
-
-    const body =
-        "Name: " + data.get("name") + "\n" +
-        "Email: " + data.get("email") + "\n" +
-        "Applying For: " + data.get("role") + "\n" +
-        "Portfolio: " + (data.get("portfolio") || "Not provided") + "\n\n" +
-        "Message:\n" + (data.get("message") || "Not provided");
-
-    openEmail("Job Application - HiPlay Studios", body);
-}
-
-function sendQuoteRequest(event) {
-    event.preventDefault();
-
-    const form = event.target;
-    const data = new FormData(form);
-
-    const body =
-        "Name: " + data.get("name") + "\n" +
-        "Email: " + data.get("email") + "\n" +
-        "Service: " + data.get("service") + "\n\n" +
-        "Project Details:\n" + data.get("details");
-
-    openEmail("Project Enquiry - HiPlay Studios", body);
-}
-</script>
 
 </body>
 </html>
