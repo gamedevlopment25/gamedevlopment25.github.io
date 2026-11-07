@@ -176,38 +176,37 @@ footer { background: #020617; padding: 35px 25px 20px; text-align: left; }
 </footer>
 
 
+
 <script>
 function openEmail(subject, body) {
+
     const email = "gamedevlopment25@gmail.com";
-    const mailto = "mailto:" + email
-        + "?subject=" + encodeURIComponent(subject)
-        + "&body=" + encodeURIComponent(body);
+
+    const mailto =
+        "mailto:" + email +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
     window.location.href = mailto;
 }
 
-function sendJobApplication(event) {
-    event.preventDefault();
-    const data = new FormData(event.target);
-    const body =
-        "Name: " + data.get("name") + "\\n" +
-        "Email: " + data.get("email") + "\\n" +
-        "Applying For: " + data.get("role") + "\\n" +
-        "Portfolio: " + (data.get("portfolio") || "Not provided") + "\\n\\n" +
-        "Message:\\n" + (data.get("message") || "Not provided");
-    openEmail("Job Application - HiPlay Studios", body);
-}
-
 function sendQuoteRequest(event) {
+
     event.preventDefault();
+
     const data = new FormData(event.target);
+
     const body =
-        "Name: " + data.get("name") + "\\n" +
-        "Email: " + data.get("email") + "\\n" +
-        "Service: " + data.get("service") + "\\n\\n" +
-        "Project Details:\\n" + data.get("details");
+        "Name: " + data.get("name") + "\n" +
+        "Email: " + data.get("email") + "\n" +
+        "Service: " + data.get("service") + "\n\n" +
+        "Project Details:\n" +
+        data.get("details");
+
     openEmail("Project Enquiry - HiPlay Studios", body);
 }
 </script>
+
 
 </body>
 </html>
