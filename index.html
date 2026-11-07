@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,171 +9,262 @@
 
 <style>
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#0f172a;
-    color:white;
-    text-align:center;
+* {
+    box-sizing: border-box;
 }
 
-header{
-    background:#020617;
-    padding:30px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    text-align: center;
 }
 
-h1{
-    font-size:42px;
-    margin:10px 0;
+header {
+    background: #020617;
+    padding: 30px;
 }
 
-h2{
-    color:#ffffff;
+h1 {
+    font-size: 42px;
+    margin: 10px 0;
 }
 
-.container{
-    padding:30px;
-    max-width:1100px;
-    margin:auto;
+h2 {
+    color: #ffffff;
 }
 
-.side-section{
-    display:flex;
-    align-items:flex-start;
-    justify-content:center;
-    gap:50px;
-    margin-top:40px;
-    flex-wrap:wrap;
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.text-box{
-    flex:1;
-    max-width:850px;
-    text-align:left;
-    line-height:1.6;
-    font-size:18px;
+/* INTRODUCTION SECTION */
+
+.side-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.text-box {
+    flex: 1;
+    max-width: 850px;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 18px;
 }
 
 .game-img,
-.dev-img{
-    max-width:220px;
-    border-radius:20px;
+.dev-img {
+    max-width: 220px;
+    border-radius: 20px;
 }
 
-.btn{
-    display:inline-block;
-    padding:15px 25px;
-    background:#22c55e;
-    color:white;
-    text-decoration:none;
-    font-size:18px;
-    border-radius:10px;
-    margin-top:20px;
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 12px;
 }
 
-.btn:hover{
-    background:#16a34a;
+.btn:hover {
+    background: #16a34a;
 }
 
-.features{
-    text-align:left;
-    margin-top:30px;
-    max-width:900px;
-    margin-left:auto;
-    margin-right:auto;
+/* GAME SECTIONS */
+
+.animation-box {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 50px;
+    text-align: center;
 }
 
-.features ul{
-    font-size:18px;
-    line-height:1.8;
+.animation-box > h2 {
+    margin-top: 5px;
+    margin-bottom: 25px;
 }
 
-.animation-box{
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    margin-top:50px;
-    text-align:left;
+/* GAME GRID */
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 25px;
 }
 
-.video-container{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
-    margin-top:20px;
+.coming-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
 }
 
-.video-container iframe{
-    width:350px;
-    height:200px;
-    max-width:100%;
-    border:none;
-    border-radius:10px;
+/* INDIVIDUAL GAME CARD */
+
+.game-card {
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.service-box{
-    background:#1e293b;
-    padding:30px;
-    border-radius:15px;
-    margin-top:50px;
-    text-align:left;
+.game-card img {
+    width: 100%;
+    max-width: 220px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 12px;
 }
 
-.service-box h2{
-    text-align:center;
+.game-card h2 {
+    font-size: 21px;
+    margin: 15px 0 8px;
 }
 
-.service-box p{
-    font-size:18px;
-    line-height:1.7;
+.game-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    flex-grow: 1;
 }
 
-.service-list{
-    font-size:18px;
-    line-height:1.9;
+/* VIDEO SECTION */
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.contact-box{
-    margin-top:50px;
+.video-container iframe {
+    width: 350px;
+    height: 200px;
+    max-width: 100%;
+    border: none;
+    border-radius: 10px;
 }
 
-.contact-box a{
-    color:#38bdf8;
+/* SERVICE SECTION */
+
+.service-box {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 50px;
+    text-align: left;
 }
 
-footer{
-    background:#020617;
-    padding:20px;
-    margin-top:50px;
+.service-box h2 {
+    text-align: center;
 }
 
-a{
-    color:#38bdf8;
+.service-box p {
+    font-size: 18px;
+    line-height: 1.7;
 }
 
-@media (max-width:768px){
+.service-list {
+    font-size: 18px;
+    line-height: 1.9;
+}
 
-    h1{
-        font-size:32px;
+/* CONTACT */
+
+.contact-box {
+    margin-top: 50px;
+}
+
+.contact-box a {
+    color: #38bdf8;
+}
+
+a {
+    color: #38bdf8;
+}
+
+/* FOOTER */
+
+footer {
+    background: #020617;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .coming-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .video-container iframe{
-        width:100%;
-        height:220px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .games-grid,
+    .coming-grid {
+        grid-template-columns: 1fr;
     }
 
     .game-img,
-    .dev-img{
-        max-width:180px;
+    .dev-img {
+        max-width: 180px;
     }
 
-    .text-box{
-        font-size:16px;
+    .text-box {
+        font-size: 16px;
     }
 
-    .service-box{
-        padding:20px;
+    .animation-box {
+        padding: 18px;
+    }
+
+    .game-card {
+        padding: 18px;
+    }
+
+    .game-card img {
+        max-width: 200px;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 220px;
+    }
+
+    .service-box {
+        padding: 20px;
     }
 
 }
@@ -186,17 +278,13 @@ a{
 
     <h1>HiPlay Studios</h1>
 
-    <p>
-       Game Development Studio
-    </p>
+    <p>Game Development Studio</p>
 
 </header>
 
-
 <div class="container">
 
-
-    <!-- DEVELOPER SECTION -->
+    <!-- OUR EFFORT -->
 
     <div class="side-section">
 
@@ -209,45 +297,50 @@ a{
             <h2>Our Effort</h2>
 
             <p>
-                Our objective is to create games that are calm, less hectic, easy to play, and enjoyable, with simple controls that offer users a relaxing and satisfying experience.
-                We strive to bring art into our games rather than relying heavily on flashy visual effects.
+                Our objective is to create games that are calm, less hectic,
+                easy to play, and enjoyable, with simple controls that offer
+                users a relaxing and satisfying experience.
+
+                We strive to bring art into our games rather than relying
+                heavily on flashy visual effects.
             </p>
 
-           
-          
         </div>
 
     </div>
 
- 
-    <!-- GAME DEVELOPMENT SECTION -->
+
+    <!-- AVAILABLE GAMES -->
 
     <div class="animation-box">
 
-        <h2><p>Available on Google Play Store.</p></h2>
+        <h2>Available on Google Play Store.</h2>
 
-      
+        <div class="games-grid">
 
-        <!-- GAME 1 -->
+            <!-- GAME 1 -->
 
-        <div class="side-section">
+            <div class="game-card">
 
-            <img src="rescuedriver1.png"
-                 class="game-img"
-                 alt="Rescue Driver Gameplay">
-
-            <div class="text-box">
+                <img src="rescuedriver1.png"
+                     alt="Rescue Driver Gameplay">
 
                 <h2>Rescue Driver</h2>
 
                 <p>
-                  Rescue Driver takes you on challenging rescue missions across mountain peaks, dense jungles, and war zones. When vehicles break down in dangerous locations,
-                    people are left stranded and unable to return. You play as a Rescue Driver, navigating difficult terrain to reach them, tow their vehicles, and bring everyone safely back home.
+                    Rescue Driver takes you on challenging rescue missions
+                    across mountain peaks, dense jungles, and war zones.
+                    When vehicles break down in dangerous locations,
+                    people are left stranded and unable to return.
+                    You play as a Rescue Driver, navigating difficult
+                    terrain to reach them, tow their vehicles, and bring
+                    everyone safely back home.
                 </p>
 
                 <a class="btn"
                    href="https://play.google.com/store/apps/details?id=com.Harish.rescuedriver"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener noreferrer">
 
                    Download on Google Play
 
@@ -255,32 +348,28 @@ a{
 
             </div>
 
-        </div>
 
+            <!-- GAME 2 -->
 
-        <!-- GAME 2 -->
+            <div class="game-card">
 
-        <div class="side-section">
+                <img src="buffalo-game.png.png"
+                     alt="Fix the Bridge">
 
-            <img src="buffalo-game.png.png"
-                 class="game-img"
-                 alt="Feed the Buffalo">
-
-            <div class="text-box">
-
-                <h2>Fix the bridge</h2>
+                <h2>Fix the Bridge</h2>
 
                 <p>
-                    Fix the bridge is a calm puzzle-based game where players
-                    place different stones/wood into the correct slots to solve
-                    challenges. The game focuses on simple thinking,
-                    peaceful gameplay and enjoyable puzzle-solving for
-                    all age groups.
+                    Fix the Bridge is a calm puzzle-based game where
+                    players place different stones and wood into the
+                    correct slots to solve challenges. The game focuses
+                    on simple thinking, peaceful gameplay and enjoyable
+                    puzzle-solving for all age groups.
                 </p>
 
                 <a class="btn"
                    href="https://play.google.com/store/apps/details?id=com.feedthebuffalo&hl=en_IN"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener noreferrer">
 
                    Download on Google Play
 
@@ -290,126 +379,103 @@ a{
 
         </div>
 
-      <div class="animation-box">
+    </div>
 
-        <h2><p>Coming soon on Google Play Store.</p></h2>
 
-        <!-- GAME 3 -->
+    <!-- COMING SOON GAMES -->
 
-        <div class="side-section">
+    <div class="animation-box">
 
-            <img src="marsh mission.png"
-                 class="game-img"
-                 alt="Mars Mission">
+        <h2>Coming Soon on Google Play Store</h2>
 
-            <div class="text-box">
+        <div class="coming-grid">
+
+            <!-- GAME 3 -->
+
+            <div class="game-card">
+
+                <img src="marsh mission.png"
+                     alt="Mars Mission">
 
                 <h2>Mars Mission</h2>
 
                 <p>
-                 Mars Mission is a space adventure game where players build and assemble their own rockets, launch into space, 
-                    and travel to different destinations. Along the way, they explore new places, overcome challenges, and complete exciting space missions.
+                    Mars Mission is a space adventure game where players
+                    build and assemble their own rockets, launch into
+                    space, and travel to different destinations. Along
+                    the way, they explore new places, overcome challenges,
+                    and complete exciting space missions.
                 </p>
 
-                <a class="btn"
-                   href="#"
-                   target="_blank">
-
-                   Coming Soon
-
+                <a class="btn" href="#">
+                    Coming Soon
                 </a>
 
             </div>
 
-        </div>
 
+            <!-- GAME 4 -->
 
-        <!-- GAME 4 -->
+            <div class="game-card">
 
-        <div class="side-section">
-
-            <img src="home repair master.png"
-                 class="game-img"
-                 alt="Home Repair Master">
-
-            <div class="text-box">
+                <img src="home repair master.png"
+                     alt="Home Repair Master">
 
                 <h2>Home Repair Master</h2>
 
                 <p>
-                    Home Repair Master is an educational simulation game that
-                    teaches practical household repair and maintenance skills.
-                  
+                    Home Repair Master is an educational simulation game
+                    that teaches practical household repair and
+                    maintenance skills.
                 </p>
 
-                <a class="btn"
-                   href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
-                   target="_blank">
-
-                   Coming Soon on Google Play
-
+                <a class="btn" href="#">
+                    Coming Soon
                 </a>
 
             </div>
 
-        </div>
 
+            <!-- GAME 5 -->
 
-        <!-- GAME 5 -->
+            <div class="game-card">
 
-        <div class="side-section">
-
-            <img src="ramayan1.png"
-                 class="game-img"
-                 alt="RamKatha">
-
-            <div class="text-box">
+                <img src="ramayan1.png"
+                     alt="RamKatha">
 
                 <h2>RamKatha</h2>
 
                 <p>
-                  RamKatha is a storytelling game based on the epic Ramayana.
-                    It brings the timeless story to life through a combination of interactive storytelling, original drawings, and artistic paintings. 
+                    RamKatha is a storytelling game based on the epic
+                    Ramayana. It brings the timeless story to life
+                    through interactive storytelling, original drawings,
+                    and artistic paintings.
                 </p>
 
-                <a class="btn"
-                   href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
-                   target="_blank">
-
-                   Coming Soon on Google Play
-
+                <a class="btn" href="#">
+                    Coming Soon
                 </a>
 
             </div>
 
-        </div>
 
+            <!-- GAME 6 -->
 
-        <!-- GAME 6 -->
+            <div class="game-card">
 
-        <div class="side-section">
-
-            <img src="recycle.png"
-                 class="game-img"
-                 alt="City Clean-Up Heroes">
-
-            <div class="text-box">
+                <img src="recycle.png"
+                     alt="City Clean-Up Heroes">
 
                 <h2>City Clean-Up Heroes</h2>
 
                 <p>
-                    City Clean-Up Heroes is a fun and educational game where
-                    players collect litter, sort waste into the correct
-                    dustbins, and recycle it to keep the city clean.
-                 
+                    City Clean-Up Heroes is a fun and educational game
+                    where players collect litter, sort waste into the
+                    correct dustbins, and recycle it to keep the city clean.
                 </p>
 
-                <a class="btn"
-                   href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
-                   target="_blank">
-
-                   Coming Soon on Google Play
-
+                <a class="btn" href="#">
+                    Coming Soon
                 </a>
 
             </div>
@@ -426,14 +492,13 @@ a{
     </h2>
 
     <p>
-
         <a href="https://gamedevlopment25.github.io/privacy-policy.html"
-           target="_blank">
+           target="_blank"
+           rel="noopener noreferrer">
 
            View Privacy Policy
 
         </a>
-
     </p>
 
 
@@ -445,13 +510,13 @@ a{
 
         <p>
             Email:
+
             <a href="mailto:gamedevlopment25@gmail.com">
                 gamedevlopment25@gmail.com
             </a>
         </p>
 
     </div>
-
 
 </div>
 
@@ -468,7 +533,6 @@ a{
     </p>
 
 </footer>
-
 
 </body>
 </html>
