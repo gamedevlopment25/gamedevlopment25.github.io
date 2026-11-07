@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get a Quote | HiPlay Studios</title>
 <style>
-
 * { box-sizing: border-box; }
 body {
     margin: 0; font-family: Arial, sans-serif;
@@ -38,14 +37,6 @@ header { background: #020617; padding: 22px 30px; }
 }
 .page-card h2 { text-align: center; margin-top: 0; }
 .page-card p { line-height: 1.7; color: #e2e8f0; }
-.services-grid {
-    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;
-}
-.service-card {
-    background: #0f172a; border-radius: 12px; padding: 22px;
-}
-.service-card h3 { margin-top: 0; }
-.service-card p { color: #cbd5e1; }
 .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .form-field { display: flex; flex-direction: column; gap: 7px; }
 .form-field.full-width { grid-column: 1 / -1; }
@@ -62,7 +53,7 @@ header { background: #020617; padding: 22px 30px; }
 }
 .btn:hover { background: #16a34a; }
 .form-note { color: #cbd5e1; font-size: 14px; line-height: 1.5; }
-.back-link { color: #38bdf8; text-decoration: none; }
+.form-status { color: #fde68a; font-size: 14px; line-height: 1.5; margin: 8px 0 0; }
 footer { background: #020617; padding: 35px 25px 20px; text-align: left; }
 .footer-inner {
     max-width: 1100px; margin: auto; display: grid;
@@ -81,19 +72,17 @@ footer { background: #020617; padding: 35px 25px 20px; text-align: left; }
 @media (max-width: 900px) {
     .header-inner { justify-content: center; }
     .brand { text-align: center; }
-    .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
     .container { padding: 25px 15px 40px; }
     .main-nav { width: 100%; gap: 4px; }
     .main-nav a { padding: 9px 10px; font-size: 14px; }
-    .services-grid, .form-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
     .form-field.full-width { grid-column: auto; }
     .page-card { padding: 20px; }
     .footer-inner { grid-template-columns: 1fr; text-align: center; }
     footer { text-align: center; }
 }
-
 </style>
 </head>
 <body>
@@ -115,27 +104,27 @@ footer { background: #020617; padding: 35px 25px 20px; text-align: left; }
 </header>
 
 <main class="container">
-
 <section class="page-card">
   <h2>Get a Quote</h2>
   <p>Tell us about your project and the service you are interested in.</p>
-  <form class="form-grid" onsubmit="sendQuoteRequest(event)">
+
+  <form id="quote-form" class="form-grid">
     <div class="form-field">
       <label for="quote-name">Your Name</label>
-      <input id="quote-name" name="name" type="text" required>
+      <input id="quote-name" name="name" type="text" autocomplete="name" required>
     </div>
     <div class="form-field">
       <label for="quote-email">Email Address</label>
-      <input id="quote-email" name="email" type="email" required>
+      <input id="quote-email" name="email" type="email" autocomplete="email" required>
     </div>
     <div class="form-field full-width">
       <label for="quote-service">Your Query</label>
       <select id="quote-service" name="service" required>
         <option value="">Select a service</option>
-        <option>Web Development Service</option>
-        <option>Animation Service</option>
-        <option>Game Development Service</option>
-        <option>Other Enquiry</option>
+        <option value="Web Development Service">Web Development Service</option>
+        <option value="Animation Service">Animation Service</option>
+        <option value="Game Development Service">Game Development Service</option>
+        <option value="Other Enquiry">Other Enquiry</option>
       </select>
     </div>
     <div class="form-field full-width">
@@ -144,11 +133,13 @@ footer { background: #020617; padding: 35px 25px 20px; text-align: left; }
     </div>
     <div class="form-field full-width">
       <button class="btn" type="submit">Send Enquiry</button>
-      <p class="form-note">Your default email application will open with your enquiry details ready to send. You will need to press Send in your email application.</p>
+      <p class="form-note">
+        Clicking Send Enquiry opens Gmail with your message prepared. Please review it and press Send in Gmail.
+      </p>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
     </div>
   </form>
 </section>
-
 </main>
 
 <footer>
@@ -169,44 +160,56 @@ footer { background: #020617; padding: 35px 25px 20px; text-align: left; }
     </div>
     <div class="footer-contact">
       <h3>Contact Us</h3>
-      <a href="mailto:gamedevlopment25@gmail.com">gamedevlopment25@gmail.com</a>
+      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=gamedevlopment25%40gmail.com"
+         target="_blank" rel="noopener noreferrer">gamedevlopment25@gmail.com</a>
     </div>
   </div>
   <p class="copyright">© 2026 HiPlay Studios. All Rights Reserved.</p>
 </footer>
 
-
-
 <script>
-function openEmail(subject, body) {
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("quote-form");
+    const status = document.getElementById("form-status");
 
-    const email = "gamedevlopment25@gmail.com";
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    const mailto =
-        "mailto:" + email +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
+        if (!form.reportValidity()) {
+            return;
+        }
 
-    window.location.href = mailto;
-}
+        const data = new FormData(form);
+        const name = String(data.get("name") || "").trim();
+        const senderEmail = String(data.get("email") || "").trim();
+        const service = String(data.get("service") || "").trim();
+        const details = String(data.get("details") || "").trim();
 
-function sendQuoteRequest(event) {
+        const subject = "Project Enquiry - HiPlay Studios";
+        const body = [
+            "Name: " + name,
+            "Email: " + senderEmail,
+            "Service: " + service,
+            "",
+            "Project Details:",
+            details
+        ].join("\r\n");
 
-    event.preventDefault();
+        const gmailUrl =
+            "https://mail.google.com/mail/?view=cm&fs=1" +
+            "&to=gamedevlopment25%40gmail.com" +
+            "&su=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
 
-    const data = new FormData(event.target);
+        status.textContent = "Opening Gmail in a new tab. If it does not open, allow pop-ups for this website or use the email address in the footer.";
+        const gmailWindow = window.open(gmailUrl, "_blank");
 
-    const body =
-        "Name: " + data.get("name") + "\n" +
-        "Email: " + data.get("email") + "\n" +
-        "Service: " + data.get("service") + "\n\n" +
-        "Project Details:\n" +
-        data.get("details");
-
-    openEmail("Project Enquiry - HiPlay Studios", body);
-}
+        if (!gmailWindow) {
+            status.textContent = "Your browser blocked the Gmail tab. Allow pop-ups for this website, then click Send Enquiry again. You can also email gamedevlopment25@gmail.com directly.";
+        }
+    });
+});
 </script>
-
 
 </body>
 </html>
