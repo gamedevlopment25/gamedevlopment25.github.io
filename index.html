@@ -351,7 +351,97 @@ footer {
     margin-top: 50px;
 }
 
-/* FOOTER LAYOUT */
+/* FOOTER - MATCHES HEADER NAVIGATION */
+
+.site-footer {
+    background: #020617;
+    padding: 25px 30px 18px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    text-align: left;
+}
+
+.footer-brand h2 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer-brand p {
+    margin: 6px 0 0;
+    color: #cbd5e1;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 10px 13px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.footer-nav a:hover {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+.footer-nav a.footer-quote {
+    background: #22c55e;
+    color: #ffffff;
+}
+
+.footer-nav a.footer-quote:hover {
+    background: #16a34a;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 22px auto 0;
+    padding-top: 16px;
+    border-top: 1px solid #334155;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* LEGACY FOOTER RULES */ 
 
 footer {
     background: #020617;
@@ -360,50 +450,7 @@ footer {
     text-align: left;
 }
 
-.footer-inner {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr;
-    gap: 35px;
-}
 
-.footer-inner h2,
-.footer-inner h3 {
-    margin-top: 0;
-}
-
-.footer-inner p {
-    color: #cbd5e1;
-    line-height: 1.6;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-links a,
-.footer-contact a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-.footer-links a:hover,
-.footer-contact a:hover {
-    text-decoration: underline;
-}
-
-.copyright {
-    max-width: 1200px;
-    margin: 30px auto 0;
-    padding-top: 18px;
-    border-top: 1px solid #334155;
-    color: #94a3b8;
-    text-align: center;
-    font-size: 14px;
-}
 
 /* TABLET */
 
@@ -416,10 +463,6 @@ footer {
 
     .header-inner {
         justify-content: center;
-    }
-
-    .footer-inner {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .brand {
@@ -465,9 +508,25 @@ footer {
         padding: 20px;
     }
 
-    .footer-inner {
-        grid-template-columns: 1fr;
+    .footer-inner,
+    .footer-bottom {
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-nav {
+        width: 100%;
+        gap: 4px;
+    }
+
+    .footer-nav a {
+        padding: 9px 10px;
+        font-size: 14px;
     }
 
     footer {
@@ -773,38 +832,31 @@ footer {
 
 <!-- FOOTER -->
 
-<footer>
+<footer class="site-footer">
 
     <div class="footer-inner">
 
-        <div class="footer-about">
+        <div class="footer-brand">
             <h2>HiPlay Studios</h2>
-            <p>Creative Games. Artistic Experiences. Digital Solutions.</p>
+            <p>Game Development Studio</p>
         </div>
 
-        <div class="footer-links">
-            <h3>Quick Links</h3>
+        <nav class="footer-nav" aria-label="Footer navigation">
             <a href="#home">Home</a>
             <a href="services.html">Services</a>
             <a href="apply-for-job.html">Apply for Job</a>
-            <a href="get-a-quote.html">Get a Quote</a>
             <a href="#contact">Contact</a>
-            <a href="https://gamedevlopment25.github.io/privacy-policy.html"
-               target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-        </div>
-
-        <div class="footer-contact">
-            <h3>Contact Us</h3>
-            <a href="mailto:gamedevlopment25@gmail.com">
-                gamedevlopment25@gmail.com
-            </a>
-        </div>
+            <a href="get-a-quote.html" class="footer-quote">Get a Quote</a>
+        </nav>
 
     </div>
 
-    <p class="copyright">
-        © 2026 HiPlay Studios. All Rights Reserved.
-    </p>
+    <div class="footer-bottom">
+        <a href="https://gamedevlopment25.github.io/privacy-policy.html"
+           target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <p>© 2026 HiPlay Studios. All Rights Reserved.</p>
+        <a href="mailto:gamedevlopment25@gmail.com">gamedevlopment25@gmail.com</a>
+    </div>
 
 </footer>
 
